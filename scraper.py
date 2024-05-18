@@ -7,7 +7,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 
 BASE_URL = "https://windows10spotlight.com"
-UNTIL_PAGE = 5
+UNTIL_PAGE = 1106
 OUT_FOLDER = "out"
 
 

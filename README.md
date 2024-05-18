@@ -23,3 +23,10 @@ python scraper.py
 ```
 
 3. Find the downloaded images in the `out/` folder.
+
+
+## Todo
+
+- logging
+- headless mode
+- saving images by their ids so that metadata can be looked up on the webpage later
