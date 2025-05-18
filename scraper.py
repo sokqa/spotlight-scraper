@@ -7,7 +7,8 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 
 BASE_URL = "https://windows10spotlight.com"
-UNTIL_PAGE = 10
+FROM_PAGE = 1
+UNTIL_PAGE = 100
 OUT_FOLDER = "out"
 
 
@@ -22,12 +23,11 @@ def get_urls_from_page(driver):
         image_urls.append(url)
     return image_urls
 
-
-def collect_urls():
-    driver = selenium.webdriver.Firefox()
+def collect_urls(): 
+    driver = selenium.webdriver.Firefox() 
     driver_expiry = 10
     image_urls = []
-    for page_number in range(1, UNTIL_PAGE + 1):
+    for page_number in range(FROM_PAGE, UNTIL_PAGE + 1):
         if (page_number % driver_expiry == 0):
             driver.quit()
             driver = selenium.webdriver.Firefox()
